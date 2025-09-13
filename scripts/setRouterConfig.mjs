@@ -9,7 +9,15 @@ const __dirname = path.dirname(__filename)
 
 const args = minimist(process.argv.slice(2))
 const { watchBlog } = args
-const blacklist = ['.github', '.git', '.gitignore', 'README.md']
+const blacklist = [
+  '.github',
+  '.git',
+  '.gitignore',
+  'README.md',
+  'main.js',
+  'package-lock.json',
+  'package.json',
+]
 const whitelist = [['/xy-sea', '/xy-sea/markdown']]
 const blogsPath = path.join(__dirname, '../blogs')
 // 辅助函数：检查一个路径是否是另一个路径的子路径
