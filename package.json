@@ -16,7 +16,7 @@
     "add_v_pre":"node ./scripts/add-v-pre.mjs ./blogs/NuggetsBooklet"
   },
   "dependencies": {
-    "chokidar": "^3.5.3",
+    "chokidar": "^3.5.3"
   },
   "volta": {
     "node": "22.18.0"
