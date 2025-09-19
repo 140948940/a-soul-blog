@@ -2,21 +2,21 @@
   "name": "a-soul-docs",
   "version": "1.0.0",
   "private": true,
-  "description": "一键生成monorepo前端项目架构模板",
+  "description": "博客",
   "engines": {
-    "node": "^14.18.0 || >=16.0.0"
+    "node": ">=22.18.0"
   },
   "scripts": {
     "dev": "node ./scripts/preDoc.mjs",
     "release": "node ./scripts/release.mjs",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "docs": "vitepress dev .",
-    "docs:build": "NODE_OPTIONS=--max-old-space-size=8192 node ./scripts/setRouterConfig.mjs && vitepress build .",
-    "replace_link": "node ./scripts/replace_link.mjs"
+    "docs:build": "NODE_OPTIONS=--max-old-space-size=8192 npm run add_v_pre && node ./scripts/setRouterConfig.mjs && vitepress build .",
+    "replace_link": "node ./scripts/replace_link.mjs",
+    "add_v_pre":"node ./scripts/add-v-pre.mjs ./blogs/NuggetsBooklet"
   },
   "dependencies": {
     "chokidar": "^3.5.3",
-    "vitepress": "^1.0.0-alpha.64"
   },
   "volta": {
     "node": "18.15.0",
@@ -41,10 +41,12 @@
     "execa": "^7.1.1",
     "lint-staged": "^13.2.0",
     "minimist": "^1.2.8",
+    "oxc-minify": "^0.82.3",
     "p-series": "^3.0.0",
     "prettier": "2.8",
     "prompts": "^2.4.2",
     "semver": "^7.3.8",
+    "vitepress": "^2.0.0-alpha.12",
     "yorkie": "^2.0.0"
   },
   "author": "A SOUL",
