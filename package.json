@@ -19,8 +19,7 @@
     "chokidar": "^3.5.3",
   },
   "volta": {
-    "node": "18.15.0",
-    "pnpm": "7.29.1"
+    "node": "22.18.0"
   },
   "lint-staged": {
     "*.{js,vue,json}": [
